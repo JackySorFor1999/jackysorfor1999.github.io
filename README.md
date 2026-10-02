@@ -7,6 +7,7 @@ This is a starter personal website made with plain HTML and CSS. You can edit it
 - `index.html` contains the page content and structure: headings, paragraphs, sections, and links. GitHub Pages serves this file as your homepage.
 - `styles.css` controls the appearance: colors, fonts, spacing, and layout. The `<link>` inside `index.html` connects the stylesheet to the page.
 - `README.md` is this guide, shown on your repository's GitHub page.
+- `.gitignore` tells Git which local files to leave out. It ignores `.DS_Store`, a macOS Finder settings file, in every folder.
 
 Git stores the history of your files. GitHub hosts your repository. GitHub Pages publishes the website files so people can view them in a browser.
 
@@ -68,6 +69,14 @@ If you see a 404, check that `index.html` has been pushed to `main`, that Pages 
 ## 5. Keep improving it
 
 For every update: edit → save → preview → commit → push. Once Pages is enabled, pushing to `main` triggers publication of the new version.
+
+If the live website still looks old after pushing:
+
+1. Open the repository's **Actions** tab and wait for **pages build and deployment** to finish successfully for your latest commit. Uploading the files and publishing the site are separate steps.
+2. Open the website in a private browser window to check for a cached copy. In Chrome on a Mac, **Command + Shift + R** reloads the page without using its cached files; in Safari, use **Option + Command + R**.
+3. If the deployment succeeded but the site is still old, wait a few minutes and try again. GitHub Pages also caches published files for a short time.
+
+Adding a file to `.gitignore` does not remove a copy Git already tracks. For an accidentally tracked `.DS_Store`, `git rm --cached .DS_Store` removes it from Git while keeping it on your Mac; commit and push that removal along with `.gitignore`.
 
 JavaScript is optional. You can add it later if you need interactive behavior, such as a theme switcher. HTML and CSS are enough for this personal homepage.
 
