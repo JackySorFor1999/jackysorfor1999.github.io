@@ -4,53 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Welcome to my personal website on GitHub Pages.">
-    <!-- This title appears in your browser tab. -->
     <title>My personal website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
   </head>
   <body>
     <header class="site-header">
-      <a class="site-name" href="./"><span class="aqua-orb" aria-hidden="true"></span>My website</a>
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="https://github.com/JackySorFor1999">GitHub ↗</a>
-      </nav>
+      <p class="site-name"><span class="aqua-orb" aria-hidden="true"></span>Jacky</p>
+      <a class="profile-link" href="https://github.com/JackySorFor1999">GitHub <span aria-hidden="true">↗</span></a>
     </header>
 
     <main>
-      <!-- Start by replacing this heading and paragraph with your own introduction. -->
       <section class="intro" aria-labelledby="intro-heading">
         <p class="eyebrow">A little space on the internet</p>
-        <h1 id="intro-heading">Hello, I'm Jacky.<br>This is my website.</h1>
+        <h1 id="intro-heading">Hello, I'm Jacky.</h1>
         <p class="intro-text">I'm learning to build for the web. This is where I'll share what I make and what I learn along the way.</p>
-        <a class="button" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a>
       </section>
 
-      <div class="content-grid">
-        <section class="content-section" id="about" aria-labelledby="about-heading">
-          <p class="eyebrow">01 / A quick introduction</p>
-          <h2 id="about-heading">About me</h2>
-          <p>This is a place for your story. Replace this paragraph with a few sentences about yourself, your interests, and what you'd like to build.</p>
-        </section>
-
-        <section class="content-section" id="projects" aria-labelledby="projects-heading">
-          <p class="eyebrow">02 / Learning by making</p>
-          <h2 id="projects-heading">My projects</h2>
-          <!-- Copy this article to add another project. -->
-          <article class="project-card">
-            <p class="project-type">HTML &amp; CSS</p>
-            <h3>My first website</h3>
-            <p>A personal homepage built with HTML and CSS, ready to publish with GitHub Pages.</p>
-            <a href="https://github.com/JackySorFor1999/jackysorfor1999.github.io">View the code <span aria-hidden="true">↗</span></a>
-          </article>
-        </section>
-      </div>
+      <section class="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <article class="project">
+          <a class="project-link" href="https://github.com/JackySorFor1999/jackysorfor1999.github.io" aria-labelledby="project-title project-action">
+            <div class="project-art" aria-hidden="true">
+              <div class="mini-window">
+                <div class="mini-titlebar"><span></span></div>
+                <div class="mini-content">
+                  <span class="mini-heading"></span>
+                  <span class="mini-line"></span>
+                  <span class="mini-line short"></span>
+                  <span class="mini-aqua"></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-copy">
+              <p class="project-type">HTML &amp; CSS</p>
+              <h3 id="project-title">My first website</h3>
+              <p class="project-description">A personal homepage inspired by the simple, glossy feel of the early web.</p>
+            </div>
+            <span class="project-action" id="project-action">View source <span aria-hidden="true">↗</span></span>
+          </a>
+        </article>
+      </section>
     </main>
 
     <footer>
-      <p>Made with curiosity. Built with HTML &amp; CSS.</p>
-      <a href="https://github.com/JackySorFor1999">Find me on GitHub ↗</a>
+      <p>Made with curiosity.</p>
     </footer>
   </body>
 </html>
