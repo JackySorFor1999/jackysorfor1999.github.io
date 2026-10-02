@@ -1,0 +1,145 @@
+/* A minimal Aqua palette, inspired by Apple's early-2000s website. */
+:root {
+  --background: #ffffff;
+  --text: #24272b;
+  --muted: #616870;
+  --accent: #0069b4;
+  --border: #d4d8dd;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.site-header, main, footer {
+  width: min(960px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+/* Silver tabbed navigation: highlights above, a soft shadow below. */
+.site-header {
+  display: flex;
+  min-height: 45px;
+  margin-top: 32px;
+  border: 1px solid #a4a9af;
+  border-radius: 7px;
+  background: linear-gradient(#fff, #f0f1f2 44%, #dce0e4 48%, #f7f8f9);
+  box-shadow: inset 0 1px white, 0 2px 3px #00000012;
+}
+
+.site-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  flex: 1.3;
+  border-right: 1px solid #adb2b8;
+  border-radius: 6px 0 0 6px;
+  background: linear-gradient(#fff, #f9fafb 45%, #e9edf0 50%, #fff);
+  color: #343a40;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 1px white;
+}
+
+.aqua-orb {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #0782c5;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 15%, #fff, #ffffff00 55%), radial-gradient(ellipse at 50% 100%, #87ecff, #159ddd 65%, #086db0);
+  box-shadow: inset 0 -1px 2px #087bb1, 0 1px 1px #0000001a;
+}
+
+nav { display: flex; flex: 3; }
+nav a {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-right: 1px solid #b7bcc1;
+  box-shadow: inset 1px 0 #ffffffb3;
+  color: #41464b;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0 1px white;
+}
+nav a:last-child { border-right: 0; border-radius: 0 6px 6px 0; }
+nav a:hover { background: linear-gradient(#fff, #e1edf5 48%, #cadce9 50%, #edf6fc); color: #174e75; }
+
+/* Let the typography and whitespace do most of the work. */
+.intro { padding: 77px 24px 72px; text-align: center; }
+.eyebrow { margin: 0; color: #657383; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -0.04em; }
+h1 { margin-block: 20px 23px; font-size: clamp(34px, 5.3vw, 58px); font-weight: 600; }
+h2 { margin-block: 12px 17px; font-size: 27px; font-weight: 600; }
+h3 { margin-block: 10px; font-size: 19px; font-weight: 600; }
+.intro-text { max-width: 480px; margin-inline: auto; color: var(--muted); font-size: 15px; line-height: 1.85; }
+
+/* The split gradient and inset highlights make this a glossy Aqua button. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 16px;
+  padding: 7px 22px;
+  border: 1px solid #0876b8;
+  border-radius: 22px;
+  background: linear-gradient(#dcf8ff, #77cdf4 46%, #309fdf 49%, #69c8f2 90%, #a1e5ff);
+  box-shadow: inset 0 1px 1px white, inset 0 -1px 2px #006eb466, 0 2px 4px #12568026;
+  color: #073a63;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 1px #ffffffa6;
+  transition: box-shadow 150ms, filter 150ms;
+}
+.button:hover { filter: brightness(1.06); box-shadow: inset 0 1px white, 0 0 8px #28a9e84d; }
+.button:active { filter: brightness(0.97); }
+
+.content-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 52px; padding-block: 34px 40px; border-top: 1px solid var(--border); }
+.content-section { min-width: 0; scroll-margin-top: 24px; }
+.content-section > p:not(.eyebrow) { max-width: 650px; margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.9; }
+.project-card { margin-top: 20px; padding: 21px 23px; border: 1px solid #c5cbd2; border-radius: 5px; background: linear-gradient(#fff 65%, #f5f7f9); box-shadow: inset 0 1px white, 0 1px 2px #00000006; }
+.project-type { margin: 0; color: #677582; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; }
+.project-card > p:not(.project-type) { margin-bottom: 12px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.project-card a { font-size: 12px; }
+footer { display: flex; justify-content: space-between; gap: 16px; padding-block: 21px 32px; border-top: 1px solid var(--border); color: var(--muted); font-size: 10px; }
+footer p { margin: 0; }
+
+/* Keep the same simple layout comfortable on a phone. */
+@media (max-width: 600px) {
+  .site-header, main, footer { width: calc(100% - 32px); }
+  .site-header { margin-top: 20px; }
+  .site-name { flex: 1.4; gap: 6px; padding-inline: 9px; font-size: 10px; white-space: nowrap; }
+  .aqua-orb { width: 14px; height: 14px; flex-shrink: 0; }
+  nav a { min-height: 42px; padding-inline: 7px; font-size: 10px; }
+  .intro { padding: 59px 0 55px; }
+  .intro .eyebrow { font-size: 9px; }
+  h1 { font-size: clamp(29px, 7.6vw, 43px); letter-spacing: -0.045em; }
+  .intro-text { max-width: 360px; font-size: 13px; }
+  .content-grid { grid-template-columns: 1fr; gap: 32px; padding-block: 28px 32px; }
+  h2 { font-size: 25px; }
+  .project-card { padding: 20px; }
+  footer { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}
